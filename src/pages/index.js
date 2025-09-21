@@ -1,41 +1,49 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import styles from './index.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function Home() {
+  const {siteConfig = {}} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+    <Layout title={siteConfig.title || 'Home'} description={siteConfig.tagline || 'Welcome'}>
+      <main className={styles.hero}>
+        <div className={styles.inner}>
+          {/* hero tagline */}
+          <h1 className={styles.taglineLarge}>{siteConfig.tagline || 'Documentation site'}</h1>
+
+          <section className={styles.features}>
+            <div className={styles.feature}>
+              <h3>Mess-free backend</h3>
+              <p>Minimal setup, simple APIs, runs anywhere.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Easy to learn</h3>
+              <p>Clear docs and examples get you productive fast.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Animate fluidly</h3>
+              <p>Smooth animations that feel natural and responsive.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Light as feathers</h3>
+              <p>Small footprint with excellent performance.</p>
+            </div>
+          </section>
+
+          <section className={styles.ctaSection}>
+            <h3>It's time to make UI better</h3>
+            <p>It's open-source and free, so give it a spin and see what you think.</p>
+          </section>
+
+          <div className={styles.buttons}>
+            <a href="/docs/getting-started" className={styles.button}>Get Started</a>
+            <a href="/blog" className={styles.buttonSecondary}>Blog</a>
+          </div>
         </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
       </main>
     </Layout>
   );
 }
+
+export default Home;

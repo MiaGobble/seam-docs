@@ -1,27 +1,41 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  title: 'Seam',
+  tagline: 'The next evolution of interface programming on Roblox',
   favicon: 'img/favicon.ico',
+
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
+  // Set the production url of your site here
+  url: 'https://seaminterface.com',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'iGottic', // Usually your GitHub org/user name.
+  projectName: 'Seam', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -33,21 +47,29 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/MiaGobble/Seam/',
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/MiaGobble/Seam/',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -56,27 +78,33 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Replace with your project's social card
+      image: 'img/seam.png',
+
       navbar: {
-        title: 'My Site',
+        //title: 'Seam',
+
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Seam Logo',
+          src: 'img/seam.png',
         },
+
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Get Started',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/MiaGobble/Seam/',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -84,8 +112,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Get Started',
+                to: '/docs/getting-started',
               },
             ],
           },
@@ -93,16 +121,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://x.com/iGottic_Real',
               },
             ],
           },
@@ -115,18 +135,33 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/MiaGobble',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Seam. Made by Mia Gobble.`,
       },
+
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        // Ensure Prism loads lua highlighting for Luau code fences (we'll alias luau -> lua in a client module)
+        additionalLanguages: ['lua'],
+      },
+      // Load a small client module that aliases the 'luau' fence to Prism's 'lua' language
+      clientModules: [require.resolve('./src/js/prism-luau-alias.js')],
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
     }),
+    // Register any build-time plugins here
+    plugins: [
+      // This plugin requires and registers a Luau grammar with Prism during the build
+      './plugins/register-luau',
+    ],
 };
 
-module.exports = config;
+export default config;
