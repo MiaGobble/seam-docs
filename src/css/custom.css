@@ -313,6 +313,61 @@ button:focus, a:focus, .infima-btn:focus, .button:focus, .pagination-nav__link:f
   }
 }
 
+/* Page transition: fade + slight zoom on route changes */
+.route-transition-outer {
+  /* Prevent overflow during animation */
+  overflow: visible;
+}
+
+.route-transition-wrapper {
+  /* No default animation: only play when explicitly enabled by Root via
+     .route-transition-full or .route-transition-docInner on the outer wrapper. */
+  animation: none;
+  transform-origin: top center;
+}
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.995) translateY(6px);
+  }
+  /* 60% {
+    opacity: 0.6;
+    transform: scale(0.99) translateY(0);
+  } */
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Full-page transition only when swapping between site roots (home, getting-started, blog) */
+.route-transition-outer.route-transition-full > .route-transition-wrapper {
+  animation: fadeZoomIn 320ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+/* Docs inner content transition when navigating between docs pages. We target the
+   docs content area (.theme-doc-markdown inside main) so the sidebar remains steady. */
+.route-transition-outer.route-transition-docInner .theme-doc .theme-doc-main-content,
+.route-transition-outer.route-transition-docInner .theme-doc .theme-doc-markdown,
+.route-transition-outer.route-transition-docInner .theme-doc .markdown,
+.route-transition-outer.route-transition-docInner .theme-doc .theme-doc-content {
+  /* Broaden selectors to match different theme variations. Use !important so
+     these run even if other CSS is applied to these elements. */
+  animation: fadeZoomIn 260ms ease-out both !important;
+  transform-origin: top center !important;
+}
+
+/* Respect reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  .route-transition-wrapper,
+  .route-transition-outer.route-transition-docInner .theme-doc .theme-doc-main-content,
+  .route-transition-outer.route-transition-docInner .theme-doc .theme-doc-markdown {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 
 
 
