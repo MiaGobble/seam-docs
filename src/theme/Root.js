@@ -30,7 +30,7 @@ export default function Root({children}) {
     const pPrev = normalize(prev);
     const pCur = normalize(current);
 
-    const siteSet = new Set(['/', '/blog', '/docs/API']);
+    const siteSet = new Set(['/', '/blog', '/docs/getting-started']);
 
     const isSite = (q) => siteSet.has(q);
     const isDocs = (q) => q.startsWith('/docs');

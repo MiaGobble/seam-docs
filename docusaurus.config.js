@@ -113,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'API',
-                to: '/docs/API',
+                to: '/docs/getting-started',
               },
             ],
           },
