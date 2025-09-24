@@ -271,10 +271,10 @@ button:focus, a:focus, .infima-btn:focus, .button:focus, .pagination-nav__link:f
 
 /* Center footer content and lists */
 .footer, .footer .footer__links, .footer .footer__links .footer__link-items, .footer .container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center !important; */
+  text-align: center;
 }
 
 .footer .footer__links .footer__link-items ul {
@@ -282,7 +282,7 @@ button:focus, a:focus, .infima-btn:focus, .button:focus, .pagination-nav__link:f
   margin: 0.4rem 0 !important;
 }
 
-/* Docs page / getting-started: style buttons inside markdown to match site buttons (no outline, dark background, square) */
+/* Docs page / api: style buttons inside markdown to match site buttons (no outline, dark background, square) */
 .theme-doc-markdown button, .theme-doc-markdown .button, .theme-doc-markdown a.button, .theme-doc-markdown a.buttonSecondary, .theme-doc-markdown .infima-btn {
   outline: none !important;
   box-shadow: none !important;
@@ -341,7 +341,7 @@ button:focus, a:focus, .infima-btn:focus, .button:focus, .pagination-nav__link:f
   }
 }
 
-/* Full-page transition only when swapping between site roots (home, getting-started, blog) */
+/* Full-page transition only when swapping between site roots (home, api, blog) */
 .route-transition-outer.route-transition-full > .route-transition-wrapper {
   animation: fadeZoomIn 320ms cubic-bezier(.2,.9,.2,1) both;
 }

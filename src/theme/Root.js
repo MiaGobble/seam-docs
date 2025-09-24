@@ -10,7 +10,7 @@ export default function Root({children}) {
 
   // Compute animation mode based on previous and current pathnames.
   // - Full animation when both prev and current are in the 'site' set
-  //   (home, getting-started, blog).
+  //   (home, api, blog).
   // - Doc-inner animation when both prev and current are docs pages (/docs/*).
   const computeAnimationClass = (prev, current) => {
     if (!prev || !current) return '';
@@ -30,13 +30,13 @@ export default function Root({children}) {
     const pPrev = normalize(prev);
     const pCur = normalize(current);
 
-    const siteSet = new Set(['/', '/blog', '/docs/getting-started']);
+    const siteSet = new Set(['/', '/blog', '/docs/API']);
 
     const isSite = (q) => siteSet.has(q);
     const isDocs = (q) => q.startsWith('/docs');
 
   // Trigger full-page animation only when navigating between site-level pages
-  // (home, blog, getting-started). For docs→site or site→docs we do not
+  // (home, blog, api). For docs→site or site→docs we do not
   // play the full animation. If both are docs pages, animate only the
   // inner docs content.
 

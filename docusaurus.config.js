@@ -94,7 +94,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Get Started',
+            label: 'API',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -112,8 +112,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Get Started',
-                to: '/docs/getting-started',
+                label: 'API',
+                to: '/docs/API',
               },
             ],
           },

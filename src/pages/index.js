@@ -37,7 +37,7 @@ function Home() {
           </section>
 
           <div className={styles.buttons}>
-            <a href="/docs/getting-started" className={styles.button}>Get Started</a>
+            <a href="/docs/API" className={styles.button}>API</a>
             <a href="/blog" className={styles.buttonSecondary}>Blog</a>
           </div>
         </div>
