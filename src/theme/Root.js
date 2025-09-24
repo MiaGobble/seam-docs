@@ -39,9 +39,14 @@ export default function Root({children}) {
   // (home, blog, getting-started). For docs→site or site→docs we do not
   // play the full animation. If both are docs pages, animate only the
   // inner docs content.
-  if (isSite(pPrev) && isSite(pCur)) return 'route-transition-full';
-  if (isDocs(pPrev) && isDocs(pCur)) return 'route-transition-docInner';
-    return '';
+
+  // if (isSite(pPrev) && isSite(pCur)) return 'route-transition-full';
+  // if (isDocs(pPrev) && isDocs(pCur)) return 'route-transition-docInner';
+  //   return '';
+  // }; // Nvm I'm gonna disable this for now since it's a bit janky
+
+  if (true)
+    return ''; // Disables the transition animations
   };
 
   const animationClass = computeAnimationClass(prevRef.current, location.pathname);
