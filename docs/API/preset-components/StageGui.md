@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 
-# ScaledUIStroke
-Updates UI stroke thickness based on screen resolution.
+# StageGui
+Preconfigured GUI that does not reset on spawn or have GUI inset.
 
 :::warning
 
