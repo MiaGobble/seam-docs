@@ -11,7 +11,7 @@ Constructs a Roblox instance, or hydrates an existing one with Seam states
 
 ## Constructor
 ```lua
-New(Object : string | Instance, Properties : {[any] : any}, From : From?) -> Instance
+New(Object : string | Instance | CustomComponent, Properties : {[any] : any}, From : From?) -> Instance
 ```
 
 ## Usage
@@ -37,6 +37,17 @@ local Object = New(ExistingFrame, {
 })
 ```
 
-There are three parameters: object (as a string or instance), properties (as a dictionary), and optionally a common component (read more about `From()` to learn about this third parameter).
+There are two parameters: object (as a string, instance, or custom component module), and properties (as a dictionary).
 
-You can use states and other declarations with `New`. Read more about it in the rest of the documentation!
+If you are using a custom component, you can use the `Component()` declaration at the end of that module, and then use that module as the first parameter to `New`:
+
+```lua
+local MyFrameComponent = require(Path.To.Component)
+
+local Object = New(MyFrameComponent, {
+    -- Properties here
+    Size = UDim2.fromScale(0.5, 0.5), -- Example
+})
+```
+
+You can learn more about components under the `Component` page. Use states and other declarations with `New`. Read more about it in the rest of the documentation!

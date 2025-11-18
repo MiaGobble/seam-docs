@@ -12,11 +12,11 @@ Jump straight into it by downloading it via one of the recommended ways! Then, l
 ### Seam is not yet fully released as a 1.0 resource
 I (Mia/iGottic) am managing fixes, changes, and more by myself over time to ensure Seam is in good shape.
 
-Seam *should* be safe for production use, but be weary that you can have unexpected edge-case issues at any time. If this happens, let me know as soon as possible so I can fix it. As development continues, Seam may or may not also get major changes that breaks previous code. I'll do my best to prevent this from happening, but I can not guarantee anything. This means that you can expect features to be added, removed, or changed at any time.
+Seam might be safe for production use, but be weary that you can have unexpected edge-case issues at any time. If this happens, let me know as soon as possible so I can fix it. As development continues, Seam may or may not also get major changes that is not compatible with previous versions. I'll do my best to prevent this from happening, but I can not guarantee anything.
 
-Again, though, it should be okay to use, and major issues are unlikely to happen at this point in development.
+This means that you can expect features to be added, removed, or changed at any time.
 
-Thanks for the read, now go have fun with your UI 😃
+Thanks for the read, now go have fun with your UI!
 
 :::
 

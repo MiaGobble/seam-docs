@@ -220,7 +220,7 @@ local ChasingSquare = New("Frame", {
 })
 ```
 
-Near the top of the script, where we delcared our Seam things, let's also import `Children` and `From`, which we will use next.
+Near the top of the script, where we delcared our Seam things, let's also import `Children`, which we will use next.
 
 ```lua
 local Seam = require(ReplicatedFirst.Seam)
@@ -229,33 +229,6 @@ local Spring = Seam.Spring
 local New = Seam.New
 -- We added the below:
 local Children = Seam.Children
-local From = Seam.From
-```
-
-Now, remember when we made the GUI to put the square in? Turns out Seam has a few built-in components, one of which is `StageGui`; this component does exactly what we were doing earlier, and so instead of doing it ourselves, we can just apply that component.
-
-But... how does that work?
-
-It's super simple, we use `From`! The syntax of this is simple, just like this: `From(ComponentName, ...)`.
-
-When we used the `New` constructor earlier, we passed in two value: class name, and instance properties. But, there is an **optional** third value we can pass in, which is the `From` declaration.
-
-So, instead of doing this:
-
-```lua
-local Gui = New("ScreenGui", {
-	ResetOnSpawn = false,
-	IgnoreGuiInset = true,
-	Parent = PlayerGui,
-})
-```
-
-We can just do this:
-
-```lua
-local Gui = New("ScreenGui", {
-	
-}, From "StageGui") -- Remember, StageGui component does exactly what we were doing earlier
 ```
 
 After cleaning up the code to remove unused variables, our script should now look like this:
@@ -268,11 +241,12 @@ local Seam = require(ReplicatedFirst.Seam) -- For the sake of this tutorial, thi
 local Rendered = Seam.Rendered
 local Spring = Seam.Spring
 local New = Seam.New
-local From = Seam.From
 
 local Gui = New("ScreenGui", {
-	
-}, From "StageGui")
+	ResetOnSpawn = false,
+	IgnoreGuiInset = true,
+	Parent = PlayerGui,
+})
 
 local ChasingSquare = New("Frame", {
 	Size = UDim2.fromOffset(50, 50),
@@ -298,8 +272,12 @@ By doing this:
 
 ```lua
 local Gui = New("ScreenGui", {
+	ResetOnSpawn = false,
+	IgnoreGuiInset = true,
+	Parent = PlayerGui,
+
 	[Children] = {} -- A table of instances
-}, From "StageGui")
+})
 ```
 
 We are making everything in the table we created be a child of the GUI. Or, in other words, we set the `Parent` property of each of those instances to the GUI.
@@ -314,10 +292,13 @@ local Seam = require(ReplicatedFirst.Seam)
 local Rendered = Seam.Rendered
 local Spring = Seam.Spring
 local New = Seam.New
-local From = Seam.From
 local Children = Seam.Children
 
 local Gui = New("ScreenGui", {
+	ResetOnSpawn = false,
+	IgnoreGuiInset = true,
+	Parent = PlayerGui,
+
 	[Children] = {
 		New("Frame", {
 			Size = UDim2.fromOffset(50, 50),
@@ -333,7 +314,7 @@ local Gui = New("ScreenGui", {
 			end), 5, 0.5)
 		})
 	}
-}, From "StageGui")
+})
 ```
 
 And that's it! It's a super simple script to do something fun. Now you know the basics!

@@ -6,7 +6,6 @@ sidebar_position: 5
 
 :::info
 
-### This tutorial is not yet released!
-Keep an eye peeled, and for now, feel free to browse the documentation and experiment.
+**This tutorial still needs to be finished!** Keep an eye peeled, and in the meantime, learn about scopes in a more technical and straightforward way by taking a look at [**scope's API docs**](../API/memory/Scope.md).
 
 :::

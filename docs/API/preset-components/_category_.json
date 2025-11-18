@@ -1,8 +1,0 @@
-{
-  "label": "Preset Components",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Out-of-the-box components you can use with `From()`."
-  }
-}
