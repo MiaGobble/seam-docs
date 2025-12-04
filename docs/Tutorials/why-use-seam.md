@@ -15,6 +15,8 @@ This is where Seam comes in! With Seam, you can take advantage of simple syntax,
 
 Gone are the days of frameworks with a messy library backend and strict framework structures, and starting today you can make your co-workers (and yourself) thankful for beautiful and elegant code that isn't difficult to read.
 
+You can learn about how Seam compares to other UI frameworks [__in the blog post discussing it__](../../blog/seam-comparison).
+
 ## Assumptions made about you
 All tutorials and examples assume the following:
 * You are experienced with Luau enough to understand the nuances of syntax and more

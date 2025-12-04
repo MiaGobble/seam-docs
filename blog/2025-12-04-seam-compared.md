@@ -33,8 +33,10 @@ For example, React-lua is built well for large-scale projects, but doesn't make 
 
 Seam also performs well on the backend, being on-par with some other frameworks like Vide, or in extreme test cases, performing up to 5x-17x better (such as when compared to Fusion).
 
+Lastly, Seam also does not have strict usage with syntax or juxtaposition, so you can arrange and type stuff in many different ways to match your coding conventions.
+
 ## So, what do ya say?
-Most major UI frameworks serve a purpose for a specific set of developers, and I won't disrespect or invalidate them. But, with that being said, Seam also has a reason for existing, and might be worth checking out for your UI/UX needs in your Roblox game.
+Most major UI frameworks serve a purpose for a specific set of developers, and I won't disrespect or invalidate them. But, with that being said, Seam also has a reason for existing, and might be worth checking out for UI/UX needs in your Roblox game.
 
 I'm always open to feedback, though, and Seam is always changing for the better. If you have me added on Discord, reach out to me there! Otherwise, message me on Twitter or Roblox DevForum.
 
