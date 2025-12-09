@@ -11,7 +11,6 @@ Keep in mind that this script is lengthy because we are making the gui and butto
 
 ```lua
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local UserInputService = game:GetService("UserInputService")
 local PlayersService = game:GetService("Players")
 
 local Seam = require(Path.To.Seam)

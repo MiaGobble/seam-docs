@@ -10,7 +10,7 @@ This concept is presented in Seam using "scopes". A scope allows you to group in
 To start, let's make a new script declaring Seam's scope declaration:
 
 ```lua
-local Seam = require(ReplicatedFirst.Seam)
+local Seam = require(Path.To.Seam)
 local Scope = Seam.Scope
 ```
 
