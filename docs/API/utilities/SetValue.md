@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 1
 ---
 
 # SetValue
@@ -7,7 +7,7 @@ Safely sets a value for a state, then returns it.
 
 |Type|Since|Scoped|
 |----|-----|------|
-|Declaration|0.3.1|No|
+|Utility|0.3.1|No|
 
 ## Constructor
 ```lua

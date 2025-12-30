@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
 ---
 
 # GetValue
@@ -7,7 +7,7 @@ Safely retrieves a value from any userdata, including states.
 
 |Type|Since|Scoped|
 |----|-----|------|
-|Declaration|0.2.2|No|
+|Utility|0.2.2|No|
 
 ## Constructor
 ```lua
