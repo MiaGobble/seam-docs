@@ -29,3 +29,5 @@ New(MyObject, {
 
 MyObject:SetAttribute("Lemons", 5)
 ```
+
+This is equivalent to connecting to `Instance:GetAttributeChangedSignal()`

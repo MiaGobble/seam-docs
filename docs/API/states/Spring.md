@@ -57,3 +57,5 @@ local Object = New("Object", {
     Position = Spring(0, 30, 0.8)
 })
 ```
+
+Springs are a great way to do either bouncy or smooth animation, without having to declare a tween.

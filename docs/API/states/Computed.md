@@ -50,3 +50,5 @@ New(MyFrame, {
     end)
 })
 ```
+
+When you get a state's value with `Use`, you are telling the `Computed` instance to update anytime that read value updates. `Computed` will *not* react to values that are not wrapped with `Use`.

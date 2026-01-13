@@ -34,3 +34,5 @@ local MyInstance = New("Part", {
 	Color = MyState -- Because we set Color to MyState, OnAttached triggers and prints "Attached to: Part"
 })
 ```
+
+More specifically, `OnAttached` only uses the callback function when the associated state is used by something else in a reactive way. For example, reading a state value or using `OnChanged` will *not* trigger `OnAttached`, but using a state in `New` *will* trigger it.

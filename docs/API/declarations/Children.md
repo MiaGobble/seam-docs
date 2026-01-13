@@ -28,6 +28,8 @@ local Object = New("Object", {
 })
 ```
 
+You can achieve similar results by parenting all children of the instance with `Instance.Parent`, but this is quicker.
+
 If you wanted children to be more reactive/dynamic, you can alternatively pass in a `Computed() `state. When the computed instance updates, it will update the children. For this to work, `Computed()` must return a table of instances every time.
 
 ```lua

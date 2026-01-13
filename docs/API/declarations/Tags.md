@@ -26,3 +26,5 @@ local NewObject = New(Object, {
     -- Other properties, etc...
 })
 ```
+
+An equivalent to the above example would be to call `Instance:AddTag()` for each of the provided strings.

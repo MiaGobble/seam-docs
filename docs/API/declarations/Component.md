@@ -53,3 +53,5 @@ end
 
 return Component(ButtonComponent)
 ```
+
+Components are a great way to create reusable parts in your UI code. In the above example, the button component can be used to create buttons anywhere, all with the same behavior.

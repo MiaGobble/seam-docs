@@ -41,6 +41,8 @@ local Object = New("Frame", {
 })
 ```
 
+In this use case, it's equivalent to connecting to `Instance.Changed`.
+
 You can also track states, like so:
 
 ```lua

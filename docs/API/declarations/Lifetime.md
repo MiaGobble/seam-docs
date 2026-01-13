@@ -22,3 +22,5 @@ New(MyObject, {
     [Lifetime] = 5 -- Delete after 5 seconds
 })
 ```
+
+Behind the scenes this is just using `Debris:AddItem()`, which will guarantee cleanup.

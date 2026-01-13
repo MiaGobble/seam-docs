@@ -26,3 +26,5 @@ New(MyObject, {
 
 MyObject:SetAttribute("Apples", 5) -- Updates NumApples to 5 as well
 ```
+
+Whenever the attached state changes, the attribute does not change. Instead, the way this works is that the attribute changes get reflected into the state value, meaning that using `Instance:SetAttribute()` will trigger the change and any reactivity to it.

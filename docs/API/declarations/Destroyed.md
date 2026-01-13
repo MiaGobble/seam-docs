@@ -31,3 +31,5 @@ local Object = New("ScreenGui", {
 
 Object:Destroy() -- Prints "I've been destroyed!"
 ```
+
+This is equivalent to connecting to `Instance.Destroying`

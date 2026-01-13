@@ -26,7 +26,7 @@ local Object = New("Frame", {
 })
 ```
 
-Or alternatively, hydrate an existing instance by replacing the string with the instance you want, like this:
+Or alternatively, use an existing instance by replacing the string with the instance you want, like this:
 
 ```lua
 local ExistingFrame = Gui:FindFirstChild("Frame")

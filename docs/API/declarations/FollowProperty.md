@@ -26,3 +26,5 @@ New(MyObject, {
 
 MyObject.Color3 = Color3.fromRGB(50, 50, 50) -- This will be reflected in CurrentColor
 ```
+
+Whenever the attached state changes, the property does not change. Instead, the way this works is that the property changes get reflected into the state value, meaning that using `Instance.xyz = abc` will trigger the change and any reactivity to it.

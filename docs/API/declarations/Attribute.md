@@ -24,3 +24,5 @@ New(MyObject, {
 
 print(MyObject:GetAttribute("Lemons")) -- Prints "5"
 ```
+
+This is equivalent to doing `Instance:SetAttribute()`, but with the added benefit to also attach states to the attribute.

@@ -36,3 +36,5 @@ local Object = New("ImageButton", {
     end,
 })
 ```
+
+`OnEvent` essentially gets the event from the instance and connects to it. For example, `OnEvent "Activated` is equivalent to `Instance.Activated:Connect()`.
