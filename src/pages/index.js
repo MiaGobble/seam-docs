@@ -14,25 +14,25 @@ function Home() {
 
           <section className={styles.features}>
             <div className={styles.feature}>
-              <h3>Mess-free backend</h3>
-              <p>Minimal setup, simple APIs, runs anywhere.</p>
-            </div>
-            <div className={styles.feature}>
               <h3>Easy to learn</h3>
-              <p>Clear docs and examples get you productive fast.</p>
+              <p>A simple and flexible API allows you to do less learning and more developing.</p>
             </div>
             <div className={styles.feature}>
-              <h3>Animate fluidly</h3>
-              <p>Smooth animations that feel natural and responsive.</p>
+              <h3>Flexible and scalable</h3>
+              <p>Seam is built for projects of any size; be one person or one hundred, and it will scale with you.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3>Great for animation</h3>
+              <p>Smooth animations that feel natural and responsive are built-in to this library.</p>
             </div>
             <div className={styles.feature}>
               <h3>Light as feathers</h3>
-              <p>Small footprint with excellent performance.</p>
+              <p>Seam has a small footprint with excellent performance, even when compared to other state managers.</p>
             </div>
           </section>
 
           <section className={styles.ctaSection}>
-            <h3>It's time to make UI better</h3>
+            <h3>It's time to make games better</h3>
             <p>It's open-source and free, so give it a spin and see what you think.</p>
           </section>
 

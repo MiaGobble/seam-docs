@@ -11,6 +11,12 @@ This blog post is going to be an overview of why I think Seam is worth trying, a
 
 <!-- truncate -->
 
+:::warning
+
+Heads up! Seam is no longer just a UI library, so this blog post might be missing that context.
+
+:::
+
 ## Seam is built to be simpler and easier
 Unlike most UI frameworks, there aren't redundant features that focus on specifics. Instead, features in Seam are built to be used across multiple contexts, increasing flexibility. For example, most frameworks reserve an equivalent to `Computed` for just a simple state reaction. If you wanted to create dynamic children, you'd have to use a different constructor, which creates more clutter and confusion. In Seam, you can do *both* with `Computed`, since it acts how you would expect it to.
 
