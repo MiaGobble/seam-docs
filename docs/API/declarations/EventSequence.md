@@ -14,8 +14,6 @@ A sequence of value changes and custom callbacks that can be played/stopped/etc 
 EventSequence({
 	{
 		Time : number,
-		ValueSource : ValueInstance,
-		NewValue : any,
 		Callback : () -> nil,
 	},
 
@@ -38,6 +36,9 @@ Resumes the paused event sequence.
 
 #### `Looped`
 Setting `.Looped` to *true* will make sequences repeat after completion.
+
+#### `LoopDelayTime`
+Changes the amount of time to wait before looping (defaults to 0).
 
 ## Usage
 `EventSequence` allows you to group timed callbacks with each other, and that group has methods to play and stop the sequence. This is particularly most helpful in applications such as complex animation, since it allows you to change values at time intervals.
