@@ -14,7 +14,7 @@ Using states is a great way to solve many messy codebases. Examples of systems t
 * Visual effects
 * And more!
 
-Seam was originally built for UI and has since expanded to be for your entire game, both server and client. Seam states are simple and generic, meaning they can be used in many different places.
+Seam was originally built for UI and has since expanded to be for your entire game, both server and client. Seam states are simple and generic, meaning they can be used in many different places. Compared to other state libraries, Seam is much more feature-rich, flexible, and more performant.
 
 Your job is to solve problems without overengineering, and Seam can help with that!
 
