@@ -18,6 +18,9 @@ Value(Value : any)
 #### `Value : any`
 The current state of the value object. Can be either set or read.
 
+#### `ValueRaw : any`
+Equivalent to using `.Value`, with the exception of tables. Use this if you run into issues with table values.
+
 ## Events
 #### `Changed`
 Fired when `.Value` changes.
@@ -46,3 +49,19 @@ New(MyFrame, {
     end)
 })
 ```
+
+You can read a value any time by reading the `.Value` property:
+
+```lua
+local MyValue = Value(0)
+
+print(MyValue.Value) -- Prints 0
+```
+
+:::warning
+
+Unlike most state frameworks, Seam does update if a value deep into a table updates. This is done with proxy tables.
+
+Because of this, using tables inside values might cause weird behavior with random features, such as insertion, printing, etc. In cases like these, you may use `Value.ValueRaw` or `GetValue` to read table values to fix edge-case issues.
+
+:::

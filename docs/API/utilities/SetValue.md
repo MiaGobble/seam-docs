@@ -22,5 +22,5 @@ Below is an example usage:
 ```lua
 local MyValue = Value(1000)
 
-local NewValue = SetValue(1001) -- NewValue is 1001, and MyValue.Value is also equal to 1001
+local NewValue = SetValue(MyValue, 1001) -- NewValue is 1001, and MyValue.Value is also equal to 1001
 ```
