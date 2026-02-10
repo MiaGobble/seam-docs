@@ -33,7 +33,7 @@ function Home() {
 
           <section className={styles.ctaSection}>
             <h3>It's time to make games better</h3>
-            <p>It's open-source and free, so give it a spin and see what you think.</p>
+            <p>It's open-source and free, so give it a spin and see what you think. You can always get support here: https://discord.gg/k5MaZEU8sm</p>
           </section>
 
           <div className={styles.buttons}>
