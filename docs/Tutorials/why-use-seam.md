@@ -14,6 +14,30 @@ Using states is a great way to solve many messy systems, especially frontend, be
 
 Seam was originally built for UI and has since expanded to be for your entire game, both server and client. Seam states are simple and generic, meaning they can be used in many different places. Compared to other state libraries, Seam is much more feature-rich, flexible, and more performant.
 
+# Comparison to other reactive state libraries
+
+| *(Library feature)* | Seam | Fusion | Vide | React-luau |
+|---------------------|------|--------|------|------------|
+| Reactive states | ![](../../static/img/yes.png)|![](../../static/img/yes.png)|![](../../static/img/yes.png)|![](../../static/img/yes.png)
+| Supports hydration | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) 
+| Includes spring animation | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png)
+| Includes tween animation | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
+| Includes component system | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
+| Uses explicit declarations | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
+| Runs near vanilla speed | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
+| Can be used on server | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
+| Well-supported for Typescript | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
+| Has scopes | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png)
+| Built-in sequence functionality | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
+| Has force-recalculated computation feature | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
+| Scopes aren't required | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
+| Used by top developers | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
+| Scalable for any team or game size | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
+| Built for Roblox, not based on web dev | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
+| Built into UI Labs | ![](../../static/img/no.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
+| Mature and guaranteed stability | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
+| Declarative | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
+
 ## Assumptions made about you
 All tutorials and examples assume the following:
 * You are experienced with Luau enough to understand the nuances of syntax and more
