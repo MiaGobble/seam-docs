@@ -3,8 +3,7 @@ sidebar_position: 3
 ---
 
 # Using states and connections
-
-A core part of Seam is states. States have one or more input values, and hold one output value. The most basic form of a state in Seam is `Value`. A value does one thing: hold a value.
+The heart of Seam is designed around reactive states. States take an input, and extract an output. The most basic form of a state in Seam is `Value`. A value does one thing: hold a value.
 
 Here is an example of a value in action:
 
@@ -43,17 +42,26 @@ MyValue.Value = "Orange"
 
 `OnChanged` takes two parameters: the value being tracked (`MyValue`, in this case), and the function to be called back when reacting (and that will always give you the name of the property that changed, and the new value). When using it in this example, we print "My value changed, it's now xyz", where *xyz* is whatever the value is. In this case, it will print "My value changed! It's now Orange". It won't print Kiwi because it was connected *after* the value was created.
 
-`OnChanged` isn't a state, it's a connection. But what if we wanted one state to react to another? Say hi to `Computed`, a state that takes one or more other states and spits out one resulting value.
+`OnChanged` isn't a state, rather a connection. But what if we wanted one state to react to another? Say hi to `Computed`, a state that takes one or more other states and spits out one resulting value.
 
 Creating a computed value works like this:
 
 ```lua
+local Bar = Value("abc")
+local Where = Value("xyz")
+
 local MyComputed = Computed(function(Use)
     local Foo = Use(Bar)
     local What = Use(Where)
 
-    return Foo .. What -- In this example, they are strings
+    return Foo .. What -- Concatenate the two
 end)
+
+print(MyComputed.Value) -- Prints "abcxyz"
+
+Where.Value = "lmnop"
+
+print(MyComputed.Value) -- Prints "abclmnop"
 ```
 
 When creating a computed state, you input a function, which has a `Use` parameter (and that is a function). That function returns a resulting value.

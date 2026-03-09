@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # Learning the basics
-Let's get started with Seam! To help you learn this UI framework and some big important features, we're going to make a square frame that chases your mouse.
+Let's get started with Seam! To help you learn this state library and some big important features, we're going to make a square frame that chases your mouse.
 
 Once you finish, you should have something like this:
 

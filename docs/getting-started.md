@@ -26,3 +26,9 @@ The source code for Seam can be found here: https://github.com/MiaGobble/Seam/
 
 ## Installation via Roblox Store
 You can get it on the Roblox store here: https://create.roblox.com/store/asset/111047414707895/
+
+:::warning
+
+Installation via Roblox Store may be discontinued in the future. Instead, install from releases or Wally!
+
+:::
