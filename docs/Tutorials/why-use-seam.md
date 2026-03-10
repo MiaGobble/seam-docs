@@ -32,7 +32,6 @@ Seam was originally built for UI and has since expanded to be for your entire ga
 | Scalable for any team or game size | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
 | Built into UI Labs | ![](../../static/img/no.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
 | Mature and guaranteed stability | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
-| Declarative | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
 
 ## Assumptions made about you
 All tutorials and examples assume the following:
