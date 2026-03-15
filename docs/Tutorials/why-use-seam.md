@@ -31,8 +31,6 @@ Looking for a mature and stable UI library for Typescript? It might be better to
 | Can be used on server | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
 | Includes component system | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
 | Built-in sequence functionality | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
-| Has force-recalculated computation feature | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
-| Scopes aren't required | ![](../../static/img/yes.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png)
 | Built into UI Labs‡ | ![](../../static/img/no.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png) | ![](../../static/img/yes.png)
 | Mature and guaranteed stability | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)
 | Well-supported for Typescript | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/no.png) | ![](../../static/img/yes.png)

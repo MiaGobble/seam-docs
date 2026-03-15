@@ -33,9 +33,3 @@ local MyValue = Value("Banana")
 local X = GetValue(MyValue) -- Equals "Banana"
 local Y = GetValue("Banana") -- Equals "Banana"
 ```
-
-:::warning
-
-When reading a value state, `GetValue` will always use `Value.ValueRaw` instead of `Value.Value`.
-
-:::

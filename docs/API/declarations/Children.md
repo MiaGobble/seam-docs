@@ -28,6 +28,17 @@ local Object = New("Object", {
 })
 ```
 
+Or alternatively, you can input a single child without a table:
+
+```lua
+local Object = New("Object", {
+    Property = Value,
+    Property2 = Value2,
+
+    [Children] = ... -- Single child
+})
+```
+
 You can achieve similar results by parenting all children of the instance with `Instance.Parent`, but this is quicker.
 
 If you wanted children to be more reactive/dynamic, you can alternatively pass in a `Computed() `state. When the computed instance updates, it will update the children. For this to work, `Computed()` must return a table of instances every time.
@@ -57,3 +68,24 @@ New(ExistingFrame, {
 
 Names.Value = {"Jon"} -- When we call this, there will now only be a singular text label, with the text "Jon"
 ```
+
+Seam also supports implicit children, meaning you can make them without the `Children` declaration. To do so, just put them directly in the properties table, like so:
+
+```lua
+local Object = New("Object", {
+    -- Properties
+    Property = Value,
+    Property2 = Value2,
+
+    -- Children
+    New("Object", {
+
+    }),
+
+    New("Object", {
+
+    }),
+})
+```
+
+Implicit children have the same functionality, meaning it also supports dynamic children with states.
