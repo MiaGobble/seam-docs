@@ -47,15 +47,15 @@ Here is an example usage of this:
 
 ```lua
 local EventSeqeuence = Seam.EventSequence({
-	{1, function()
+	{1, function() -- Waits one second, then runs
 		print("a")
 	end},
 	
-	{2, function()
+	{2, function() -- Waits two seconds (plus the one from before), then runs
 		print("b")
 	end},
 	
-	{3, function()
+	{3, function() -- Waits three seconds (plus the three from before), then runs
 		print("c")
 	end},
 })
@@ -64,5 +64,5 @@ EventSeqeuence:Play()
 ```
 
 In an event sequence, you pass in an array of sequence keypoints. Each keypoint contains the following, ***in order***:
-* A time, in seconds, when the keypoint will play
+* A time, in seconds, when the keypoint will play (ordered and relative)
 * A callback function for the keypoint

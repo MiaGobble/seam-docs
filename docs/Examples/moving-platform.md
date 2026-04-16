@@ -35,7 +35,7 @@ local Animation = EventSequence({
 		TargetPosition.Value = EndPoint.Position
 	end},
 	
-	{10, function()
+	{5, function()
 		TargetPosition.Value = StartPoint.Position
 	end},
 })
