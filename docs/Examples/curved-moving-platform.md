@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Moving platform
+# Curved moving platform
 Let's make a moving platform, similar to what you see in platformer games!
 
 It looks like this:
@@ -21,22 +21,24 @@ local Scope = Seam.Scope(Seam)
 local EventSequence = Seam.EventSequence
 
 local StartPoint = workspace:WaitForChild("StartPoint") -- An existing part in workspace
+local MidPoint = workspace:WaitForChild("MidPoint") -- An existing part in workspace
 local EndPoint = workspace:WaitForChild("EndPoint") -- An existing part in workspace
 
-local TargetPosition = Scope:Value(StartPoint.Position)
-local AnimatedPosition = Scope:Tween(TargetPosition, TweenInfo.new(PLATFORM_MOVE_TIME))
+local AlphaTarget = Scope:Value(0)
+local AnimatedAlpha = Scope:Tween(AlphaTarget, TweenInfo.new(PLATFORM_MOVE_TIME))
+local Bezier = Scope:Bezier(AnimatedAlpha, StartPoint.Position, MidPoint.Position, EndPoint.Position)
 
 local Platform = Scope:New(workspace:WaitForChild("Platform"), {
-	Position = AnimatedPosition,
+	Position = Bezier,
 }) -- An existing part in workspace
 
 local Animation = EventSequence({
 	{5, function()
-		TargetPosition.Value = EndPoint.Position
+		AlphaTarget.Value = 1
 	end},
-	
+
 	{5, function()
-		TargetPosition.Value = StartPoint.Position
+		AlphaTarget.Value = 0
 	end},
 })
 
