@@ -17,7 +17,6 @@ Rendered(CalculationFunction : (number) -> Value.Value) -> nil)
 ## Properties
 #### `Value : any`
 The current value of the render. Read-only.
-
 ## Usage
 Similar to `Computed()`, `Rendered()` acts as an ever-changing state. However, it does not include the `Use()` method, and instead can derive from any userdata. As such, it force-updates every `RunService.RenderStepped` and is not reactive.
 

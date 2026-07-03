@@ -22,6 +22,16 @@ The current state of the value object. Can be either set or read.
 #### `Changed`
 Fired when `.Value` changes.
 
+## Methods
+#### `TableSet(NewTargetValue : any, Path : {any}?)`
+Replaces a table value by cloning the path to the target before mutating it.
+
+#### `TableInsert(InsertedValue : any, Path : {any}?)`
+Inserts a value into a table by cloning the path to the target before mutating it.
+
+#### `TableRemove(Index : number, Path : {any}?)`
+Removes a value from a table by cloning the path to the target before mutating it.
+
 ## Usage
 To create a value object, simply call `Value()`, passing in any value type. In this case, we will be doing a number.
 
@@ -53,4 +63,15 @@ You can read a value any time by reading the `.Value` property:
 local MyValue = Value(0)
 
 print(MyValue.Value) -- Prints 0
+```
+
+The table helpers create immutable updates by cloning the path to the changed entry before mutating it.
+
+```lua
+local Inventory = Value({
+    Weapons = {"Sword"},
+})
+
+Inventory:TableInsert("Shield", {"Weapons"})
+print(Inventory.Value.Weapons[2]) -- "Shield"
 ```
