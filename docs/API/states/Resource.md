@@ -38,7 +38,7 @@ Use `Resource` when the value depends on an async workflow such as fetching data
 
 ```lua
 local ProfileResource = Resource(function()
-	local data = ReplicatedStorage.GetSecret:InvokeServer()
+	return ReplicatedStorage.GetSecret:InvokeServer()
 end)
 
 print(ProfileResource.Status) -- "Loading" at first
